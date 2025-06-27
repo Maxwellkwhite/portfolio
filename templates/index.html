@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Maxwell's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-white mb-4">Where strategy meets execution</h1>
+                    <p class="lead text-white-50 mb-4">Requirements gathering, prioritizing features, creating and maintaining product metrics, collaborating cross-functionally, and driving product success.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="{{ url_for('static', filename='images/max.JPG') }}" alt="Profile" class="profile-image">
+                    <div class="contact-info mt-4">
+                        <h3 class="text-white mb-3">Maxwell White</h3>
+                        <div class="contact-links">
+                            <a href="mailto:maxwell.white617@gmail.com" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>maxwell.white617@gmail.com</span>
+                            </a>
+                            <a href="https://linkedin.com/in/maxwellkwhite" target="_blank" class="contact-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>linkedin.com/in/maxwellkwhite</span>
+                            </a>
+                            <a href="https://github.com/Maxwellkwhite" target="_blank" class="contact-link">
+                                <i class="fab fa-github"></i>
+                                <span>github.com/maxwellkwhite</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-divider"></div>
+                    <p class="lead mb-5">Product Manager with a passion for building user-centric solutions that drive business growth and deliver exceptional experiences.</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="about-content">
+                        <div class="about-grid">
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4>Product Strategy</h4>
+                                <p>Creating the roadmaps, understanding the business needs, and positioning the product for success.</p>
+                            </div>
+                            
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4>Communication</h4>
+                                <p>Communicating with stakeholders, developers, QA, and leadership to ensure the product is successful.</p>
+                            </div>
+                            
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4>Data-Driven Decisions</h4>
+                                <p>Using analytics (sql, tableau, etc.) to make data-driven decisions.</p>
+                            </div>
+                            
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h4>Scaling</h4>
+                                <p>After understanding and delivering the MVP, continuing to communicate and improve the product.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-timeline mt-5">
+                            <h3 class="text-center mb-4">Experience</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h5>Product Owner & Business System Architect</h5>
+                                        <span class="timeline-company">Tire Rack</span>
+                                        <span class="timeline-period">2023 - Present</span>
+                                        <p>Product Owner for new verification product and new Pay By Bank offering for business customers.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h5>Technical Consultant/Development Lead</h5>
+                                        <span class="timeline-company">NTT Data</span>
+                                        <span class="timeline-period">2021 - 2023</span>
+                                        <p>Overhauled reporting, led development teams, and roadmapped future reporting endevors.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h3 class="mb-4">Technical Skills</h3>
+                    <div class="skill-category">
+                        <h5>Product Management Tools</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Jira</span>
+                            <span class="skill-tag">Smartsheet</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h5>Analytics & Data</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Google Analytics</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Tableau</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h5>Development Knowledge</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Agile/Scrum</span>
+                            <span class="skill-tag">API Design</span>
+                            <span class="skill-tag">System Architecture</span>
+                            <span class="skill-tag">User Stories</span>
+                            <span class="skill-tag">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h3 class="mb-4">Soft Skills</h3>
+                    <div class="skill-category">
+                        <h5>Leadership & Communication</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Stakeholder Management</span>
+                            <span class="skill-tag">Presentation</span>
+                            <span class="skill-tag">Conflict Resolution</span> 
+                            <span class="skill-tag">Team Leadership</span>
+                            <span class="skill-tag">Cross-Functional Collaboration</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h5>User-Centric Approach</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Requirements Gathering</span>
+                            <span class="skill-tag">UX Design</span>
+                            <span class="skill-tag">Business Interviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                        <div class="project-image">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>New Verification System</h4>
+                            <p>Implemented a new verification system for retail customers. The system increased orders by $15 million and reduced fraud by 95%.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">API</span>
+                                <span class="project-tag">System Architecture</span>
+                                <span class="project-tag">Analytics</span>
+                            </div>
+                            <div class="project-click-indicator">
+                                <span class="click-text">Click to learn more</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                        <div class="project-image">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>New Surcharging Product</h4>
+                            <p>Created a new surcharging product for business customers. The product recouped $5 million in lost processing fees.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">API</span>
+                                <span class="project-tag">UX/UI</span>
+                                <span class="project-tag">System Architecture</span>
+                            </div>
+                            <div class="project-click-indicator">
+                                <span class="click-text">Click to learn more</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                        <div class="project-image">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Report Revamp and Roadmap</h4>
+                            <p>Revamped reporting and roadmapped future reporting endevors. Recreated 70+ reports and saved 20+ hours a month.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Tableau</span>
+                                <span class="project-tag">SQL</span>
+                                <span class="project-tag">Data Warehouse</span>
+                            </div>
+                            <div class="project-click-indicator">
+                                <span class="click-text">Click to learn more</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sample PRD Button -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#prdModal">
+                        <i class="fas fa-file-pdf me-2"></i>
+                        View Sample PRD - New Verification System
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <!-- Project 1 Modal -->
+    <div class="modal fade" id="projectModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">New Verification System</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-detail">
+                        <h4>Project Overview</h4>
+                        <p>Implemented a new verification system for retail customers that significantly improved order processing efficiency, improved fraud prevention, and allowed more orders to be placed.</p>
+                        
+                        <h5>Challenge</h5>
+                        <p>The existing verification process was manual, time-consuming, and prone to errors; leading to increased chargeback activity and lost revenue.</p>
+                        
+                        <h5>Solution</h5>
+                        <ul>
+                            <li>Designed and implemented automated verification workflows</li>
+                            <li>Have verification happen before Credit Card authorization to reduce authorization charges.</li>
+                            <li>Send 3rd part all order related information to help learn and grow with the customer base.</li>
+                            <li>Established monitoring and alerting systems for when issues occur.</li>
+                        </ul>
+                        
+                        <h5>Results</h5>
+                        <ul>
+                            <li>Increased orders by $15 million through improved processing efficiency</li>
+                            <li>Reduced fraud by 95% through new verification process.</li>
+                            <li>Verification team reduced from 11 to 1.</li>
+                            <li>Manual verification work reduced from over 500 orders daily to 15.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Modal -->
+    <div class="modal fade" id="projectModal2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">New Surcharging Product</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-detail">
+                        <h4>Project Overview</h4>
+                        <p>Developed and launched a new surcharging product for business customers that successfully recouped lost processing fees and improved revenue streams.</p>
+                        
+                        <h5>Challenge</h5>
+                        <p>Business customers were using Credit Cards to pay for their orders, which was costing the company over $6 million a year in just processing fees.</p>
+                        
+                        <h5>Solution</h5>
+                        <ul>
+                            <li>Integrated with 3rd party surcharging provider to allow business customers to pay with their Credit Card.</li>
+                            <li>Created new messaging and flow for customers using a Credit Card to pay for their order.</li>
+                            <li>Built integrations with Finance and Accounting to allow for the proper recording of the surcharge.</li>
+                        </ul>
+                        
+                        <h5>Results</h5>
+                        <ul>
+                            <li>Recouped $5 million of the $6 million in lost processing fees</li>
+                            <li>Increased debit card usage by 10+%.</li>
+                            <li>Established a scalable model for future fee structures, future legal requirements, and future surcharging.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Modal -->
+    <div class="modal fade" id="projectModal3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Report Revamp and Roadmap</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-detail">
+                        <h4>Project Overview</h4>
+                        <p>Completely revamped the reporting infrastructure and created a comprehensive roadmap for future reporting initiatives, significantly improving data accessibility and decision-making capabilities.</p>
+                        
+                        <h5>Challenge</h5>
+                        <p>Existing reports were outdated, inconsistent, and required significant manual effort to maintain, leading to inefficient decision-making and wasted resources. Any lapse in reporting could cost them accreditation and lost clients.</p>
+                        
+                        <h5>Solution</h5>
+                        <ul>
+                            <li>Conducted comprehensive audit of existing 120+ reports</li>
+                            <li>Built out 70+ reports for automated data refresh and distribution systems</li>
+                            <li>Transformed parts of the data warehouse to have more accurate data</li>
+                            <li>Developed comprehensive roadmap for future reporting enhancements</li>
+                            <li>Established best practices and documentation for report maintenance/creation</li>
+                        </ul>
+                        
+                        <h5>Results</h5>
+                        <ul>
+                            <li>Recreated and optimized 70+ reports for better usability</li>
+                            <li>Saved 20+ hours per month through automation and standardization</li>
+                            <li>Improved data accuracy and consistency across all reports</li>
+                            <li>Enhanced stakeholder satisfaction with timely, relevant insights</li>
+                            <li>Allowed company to keep accreditation and keep clients happy.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRD Modal -->
+    <div class="modal fade" id="prdModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sample PRD - New Verification System</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="pdf-container">
+                        <iframe src="{{ url_for('static', filename='New Verification System.pdf') }}" 
+                                width="100%" 
+                                height="600px" 
+                                frameborder="0">
+                            <p>Your browser does not support PDF viewing. 
+                            <a href="{{ url_for('static', filename='New Verification System.pdf') }}" target="_blank">Click here to download the PDF</a>.</p>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; {{ year }} Product Manager Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 

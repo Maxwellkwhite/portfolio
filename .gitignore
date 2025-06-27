@@ -1,0 +1,6 @@
+/.DS_Store
+/Procfile
+/__pycache__
+/instance
+/test_project_prd.json
+/venv
