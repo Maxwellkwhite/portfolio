@@ -626,6 +626,38 @@ footer {
     .project-click-indicator i {
         font-size: 0.8rem;
     }
+    
+    /* Personal Project Cards Mobile */
+    .personal-project-card {
+        padding: 1.5rem;
+    }
+    
+    .project-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .project-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .project-stats {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .stat-item {
+        padding: 0.8rem;
+    }
+    
+    .stat-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .stat-icon i {
+        font-size: 0.9rem;
+    }
 }
 
 /* Animations */
@@ -796,6 +828,191 @@ html {
 }
 
 /* Remove old About section styles */
+/* Personal Project Cards */
+.personal-project-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.personal-project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.personal-project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: var(--primary-color);
+}
+
+.personal-project-card:hover::before {
+    opacity: 1;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.project-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: var(--transition);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-icon i {
+    font-size: 2rem;
+    color: var(--text-light);
+}
+
+.personal-project-card:hover .project-icon {
+    transform: scale(1.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(100, 181, 246, 0.3);
+}
+
+.project-header h4 {
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.project-description {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.project-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.stat-icon i {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.personal-project-card .project-click-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(100, 181, 246, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(100, 181, 246, 0.2);
+    transition: var(--transition);
+    margin-top: auto;
+}
+
+.personal-project-card .project-click-indicator .click-text {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.personal-project-card .project-click-indicator i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.personal-project-card:hover .project-click-indicator {
+    background: rgba(100, 181, 246, 0.2);
+    border-color: var(--primary-color);
+}
+
+.personal-project-card:hover .project-click-indicator i {
+    transform: translateX(3px);
+}
+
+/* Dark background for personal projects section - same as skills */
+#personalprojects {
+    background-color: var(--darker-color) !important;
+}
+
+#personalprojects .section-title {
+    color: var(--text-light);
+}
+
+#personalprojects .section-divider {
+    background: var(--primary-color);
+}
+
 .accomplishment-item,
 .experience-card {
     display: none;
