@@ -24,16 +24,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about" onclick="window.rybbit.event('nav-click', {section: 'about'})">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#skills" onclick="window.rybbit.event('nav-click', {section: 'skills'})">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="#projects" onclick="window.rybbit.event('nav-click', {section: 'projects'})">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#personalprojects">Personal Projects</a>
+                        <a class="nav-link" href="#personalprojects" onclick="window.rybbit.event('nav-click', {section: 'personal-projects'})">Personal Projects</a>
                     </li>
                 </ul>
             </div>
@@ -53,15 +53,15 @@
                     <div class="contact-info mt-4">
                         <h3 class="text-white mb-3">Maxwell White</h3>
                         <div class="contact-links">
-                            <a href="mailto:maxwell.white617@gmail.com" class="contact-link">
+                            <a href="mailto:maxwell.white617@gmail.com" class="contact-link" onclick="window.rybbit.event('contact-click', {type: 'email'})">
                                 <i class="fas fa-envelope"></i>
                                 <span>maxwell.white617@gmail.com</span>
                             </a>
-                            <a href="https://linkedin.com/in/maxwellkwhite" target="_blank" class="contact-link">
+                            <a href="https://linkedin.com/in/maxwellkwhite" target="_blank" class="contact-link" onclick="window.rybbit.event('contact-click', {type: 'linkedin'})">
                                 <i class="fab fa-linkedin"></i>
                                 <span>linkedin.com/in/maxwellkwhite</span>
                             </a>
-                            <a href="https://github.com/Maxwellkwhite" target="_blank" class="contact-link">
+                            <a href="https://github.com/Maxwellkwhite" target="_blank" class="contact-link" onclick="window.rybbit.event('contact-click', {type: 'github'})">
                                 <i class="fab fa-github"></i>
                                 <span>github.com/maxwellkwhite</span>
                             </a>
@@ -252,7 +252,7 @@ migrating over securely in the first month</li>
             </div>
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal1" onclick="window.rybbit.event('project-modal-open', {project: 'verification-system'})">
                         <div class="project-image">
                             <i class="fas fa-shield-alt"></i>
                         </div>
@@ -272,7 +272,7 @@ migrating over securely in the first month</li>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
-                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal2" onclick="window.rybbit.event('project-modal-open', {project: 'surcharging-product'})">
                         <div class="project-image">
                             <i class="fas fa-credit-card"></i>
                         </div>
@@ -292,7 +292,7 @@ migrating over securely in the first month</li>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
-                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal3" onclick="window.rybbit.event('project-modal-open', {project: 'report-revamp'})">
                         <div class="project-image">
                             <i class="fas fa-chart-line"></i>
                         </div>
@@ -315,7 +315,7 @@ migrating over securely in the first month</li>
             <!-- Sample PRD Button -->
             <div class="row mt-5">
                 <div class="col-12 text-center">
-                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#prdModal">
+                    <button data-rybbit-event="prd-view" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#prdModal">
                         <i class="fas fa-file-pdf me-2"></i>
                         View Sample PRD - New Verification System
                     </button>
@@ -451,7 +451,7 @@ migrating over securely in the first month</li>
                                 height="600px" 
                                 frameborder="0">
                             <p>Your browser does not support PDF viewing. 
-                            <a href="{{ url_for('static', filename='New Verification System.pdf') }}" target="_blank">Click here to download the PDF</a>.</p>
+                            <a href="{{ url_for('static', filename='New Verification System.pdf') }}" target="_blank" onclick="window.rybbit.event('pdf-download', {document: 'verification-system-prd'})">Click here to download the PDF</a>.</p>
                         </iframe>
                     </div>
                 </div>
