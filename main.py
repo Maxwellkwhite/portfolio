@@ -17,7 +17,7 @@ def home_page():
     return render_template('index.html', year=year)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5002)
+    app.run(debug=False, port=5002)
 
 
 
